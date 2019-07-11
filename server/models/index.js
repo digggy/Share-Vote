@@ -6,9 +6,7 @@ mongoose.Promise = global.Promise;
 console.log("Running......");
 
 //Connecting to the database
-mongoose.connect('mongodb://localhost:27017/db', {
-    useNewUrlParser: true
-});
+mongoose.connect('mongodb://localhost:27017/db');
 
 module.exports.User = require('./user');
 module.exports.Poll = require('./poll');

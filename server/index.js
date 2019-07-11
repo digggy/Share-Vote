@@ -13,12 +13,8 @@ const port = process.env.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use('/api/auth', routes.auth);
 
-app.get("/", (req, res) => res.json({
-    message: "hello world"
-}));
-
-app.get("/api/auth", routes.auth);
 
 app.use(handle.notFound);
 app.use(handle.errors);
