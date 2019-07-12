@@ -14,6 +14,7 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/auth', routes.auth);
+app.use('/api/polls', routes.poll);
 
 
 app.use(handle.notFound);
