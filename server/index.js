@@ -13,10 +13,12 @@ const port = process.env.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
+// Api for authentication of users : Login and Register
 app.use('/api/auth', routes.auth);
+// Api for getting polls from the database
 app.use('/api/polls', routes.poll);
 
-
+// Error Handlers
 app.use(handle.notFound);
 app.use(handle.errors);
 
