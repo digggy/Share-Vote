@@ -2,6 +2,7 @@ import {
     ADD_ERROR,
     REMOVE_ERROR
 } from '../actionsTypes';
+
 export default (state = {
     message: null
 }, action) => {

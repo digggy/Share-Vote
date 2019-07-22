@@ -2,7 +2,7 @@ import {
     combineReducers
 } from 'redux';
 
-import errors from './error';
+import error from './error';
 import auth from './auth';
 import {
     currentPolls,
@@ -10,7 +10,7 @@ import {
 } from './polls';
 
 export default combineReducers({
-    errors,
+    error,
     auth,
     polls,
     currentPolls
