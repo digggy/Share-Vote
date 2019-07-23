@@ -27,13 +27,15 @@ class Auth extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} class="auth">
+          <div className="">
           <label htmlFor="username">Username</label>
           <input
             type="text"
             value={username}
             autoComplete="off"
             name="username"
+            className="field"
             onChange={this.handleChange}
           />
           <label htmlFor="password">Password</label>
@@ -42,9 +44,13 @@ class Auth extends Component {
             value={password}
             autoComplete="off"
             name="password"
+            className="field"
             onChange={this.handleChange}
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn">
+            Submit
+          </button>
+          </div>
         </form>
       </div>
     );
