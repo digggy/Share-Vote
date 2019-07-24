@@ -39,6 +39,7 @@ class CreatePoll extends Component {
       <Fragment key={index}>
         <label>Option</label>
         <input
+          className="field"
           type="text"
           value={option}
           onChange={e => this.handleAnswer(e, index)}
@@ -47,9 +48,11 @@ class CreatePoll extends Component {
     ));
 
     return (
+      // Add a className
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="question">Question</label>
         <input
+          className="field"
           type="text"
           name="question"
           value={this.state.question}
@@ -58,10 +61,12 @@ class CreatePoll extends Component {
 
         {options}
 
-        <button type="button" onClick={this.addAnswer}>
+        <button type="button" className="btn" onClick={this.addAnswer}>
           Add Option
         </button>
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn">
+          Submit
+        </button>
       </form>
     );
   }
